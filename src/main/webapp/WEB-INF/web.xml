@@ -14,4 +14,15 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>org.example.servlet.EmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employee</url-pattern>
+    </servlet-mapping>
+
 </web-app>

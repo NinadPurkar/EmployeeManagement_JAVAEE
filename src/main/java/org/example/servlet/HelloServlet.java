@@ -9,7 +9,12 @@ public class HelloServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse rsp) throws ServletException, IOException
     {
-        rsp.setContentType("text/html");
-        rsp.getWriter().println("<h1> Hello Java EE Project ! </h1>");
+        //at first i tried to return simple text and print
+        //rsp.setContentType("text/html");
+        //rsp.getWriter().println("<h1> Hello Java EE Project ! </h1>");
+
+        // Now returning jsp page. Using RequestDispatcher to forward the req to jsp page.
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/hello.jsp");
+        dispatcher.forward(req, rsp);
     }
 }
