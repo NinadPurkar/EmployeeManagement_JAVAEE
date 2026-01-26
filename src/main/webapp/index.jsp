@@ -12,10 +12,11 @@
 <body>
     <h2>Welcome to Employee Management System</h2>
     <form action="employee" method="post">
-        Enter Employee Name: <input type= "text" name= "empName"><br>
-        Enter Employee Departement: <input type= "text" name = "empDept"><br>
-        Enter Employee Email :  <input type= "text" name= "empEmail"><br>
-        <input type="submit" value="Add Employee">
+        <input type="hidden" name="action" value="add"/>
+        Enter Employee Name: <input type= "text" name= "name"><br>
+        Enter Employee Departement: <input type= "text" name = "department"><br>
+        Enter Employee Email :  <input type= "text" name= "email"><br>
+        <input type="submit" value="Add">
     </form>
 </body>
 </html>
