@@ -1,22 +1,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String user = (String) session.getAttribute("user");
-    if (user == null) {
-        response.sendRedirect("login.jsp");
-        return;
-    }
-%>
-
 <html>
-<head><title>Employee Management</title></head>
+<head>
+    <title>Employee Management System</title>
+    <!-- Link to CSS (you can create style.css later in /css folder) -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
 <body>
-    <h2>Welcome to Employee Management System</h2>
-    <form action="employee" method="post">
-        <input type="hidden" name="action" value="add"/>
-        Enter Employee Name: <input type= "text" name= "name"><br>
-        Enter Employee Departement: <input type= "text" name = "department"><br>
-        Enter Employee Email :  <input type= "text" name= "email"><br>
-        <input type="submit" value="Add">
-    </form>
+    <div class="container">
+        <h1>Welcome to Employee Management System</h1>
+
+        <p>Choose an option below to get started:</p>
+
+        <nav>
+            <ul>
+                <li><a href="employee?action=list">📋 View Employees</a></li>
+                <li><a href="addEmployee.jsp">➕ Add Employee</a></li>
+                <li><a href="employee?action=search">🔍 Search Employee</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
